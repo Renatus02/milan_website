@@ -16,7 +16,7 @@ function fetchWithRedirects(url, depth = 0) {
   return new Promise((resolve, reject) => {
     const isHttps = url.startsWith('https');
     const client = isHttps ? https : http;
-    const req = client.get(url, { headers: { 'User-Agent': 'fixnow-downloader', 'Accept': 'image/*' } }, (res) => {
+  const req = client.get(url, { headers: { 'User-Agent': 'prontoriparo-downloader', 'Accept': 'image/*' } }, (res) => {
       const code = res.statusCode || 0;
       // Handle redirects (3xx)
       if (code >= 300 && code < 400 && res.headers.location) {
@@ -43,7 +43,7 @@ function fetchWithRedirects(url, depth = 0) {
 async function downloadBuffer(url) {
   // Prefer global fetch if available (Node 18+), else fallback to manual https/http with redirects
   if (typeof fetch === 'function') {
-    const res = await fetch(url, { headers: { 'User-Agent': 'fixnow-downloader', 'Accept': 'image/*' }, redirect: 'follow' });
+    const res = await fetch(url, { headers: { 'User-Agent': 'prontoriparo-downloader', 'Accept': 'image/*' }, redirect: 'follow' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return Buffer.from(await res.arrayBuffer());
   }

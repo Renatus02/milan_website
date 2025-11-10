@@ -2,18 +2,21 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FixNow 24h — Servizi Urgenti Milano</title>
-  <meta name="description" content="FixNow 24h: pronto intervento a Milano e provincia. Idraulico, fabbro, spurgo, caldaie, condizionatori e tetti. Disponibili 24/7: 0282398850.">
+  <title>Pronto Intervento Milano 24h | Idraulico, Fabbro, Spurgo, Caldaie, Condizionatori, Tetti</title>
+  <meta name="description" content="Pronto Intervento a Milano e provincia 24/7. Idraulico urgente, Fabbro apertura porte, Spurgo pozzi neri, Caldaie, Condizionatori e Riparazioni Tetti. Chiama 0282398850.">
   <link rel="preload" as="image" href="images/hero-home.jpg" imagesrcset="images/hero-home.jpg" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <script defer src="main.js"></script>
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <meta name="robots" content="index,follow">
 </head>
 <body>
   <header>
     <div class="nav container">
       <a href="index.html" class="logo" aria-label="Homepage">
         <!-- Improved Milano-style logo: shield + wrench lightning -->
-        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FixNow 24h Logo">
+  <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ProntoRiparo 24h Logo">
           <defs>
             <linearGradient id="g" x1="0" x2="1">
               <stop offset="0" stop-color="#ef4444"/>
@@ -24,7 +27,7 @@
           <path d="M150 84l-26 14 10 18-28 16 6 10 44-24-12-22 16-8z" fill="#fff"/>
         </svg>
         <div>
-          <div class="brand">FixNow 24h</div>
+          <div class="brand">ProntoRiparo 24h</div>
           <div class="sub">Servizi Urgenti • Milano</div>
         </div>
       </a>
@@ -32,28 +35,46 @@
         <div class="dropdown">
           <a href="idraulico.html">IDRAULICO ▾</a>
           <div class="dropdown-content">
-            <a href="idraulico.html#riparazioni">Riparazioni</a>
-            <a href="idraulico.html#installazioni">Installazioni</a>
-            <a href="idraulico.html#sblocco">Sblocco scarichi</a>
+            <a href="idraulico-riparazioni.html">Riparazioni idrauliche</a>
+            <a href="idraulico-installazioni.html">Installazioni idrauliche</a>
+            <a href="idraulico-sblocco-scarichi.html">Sblocco scarichi</a>
           </div>
         </div>
         <div class="dropdown">
           <a href="fabbro.html">FABBRO ▾</a>
           <div class="dropdown-content">
-            <a href="fabbro.html#aperture">Apertura porte</a>
-            <a href="fabbro.html#serrature">Serrature</a>
+            <a href="fabbro-apertura-porte.html">Apertura porte</a>
+            <a href="fabbro-serrature.html">Serrature e cilindri</a>
           </div>
         </div>
         <div class="dropdown">
           <a href="spurgo.html">SPURGO ▾</a>
           <div class="dropdown-content">
-            <a href="spurgo.html#pozzi">Pozzi neri</a>
-            <a href="spurgo.html#disostruzione">Disostruzione</a>
+            <a href="spurgo-pozzi-neri.html">Pozzi neri</a>
+            <a href="spurgo-disostruzione.html">Disostruzione</a>
           </div>
         </div>
-        <a href="caldaia.html">CALDAIA</a>
-        <a href="condizionatori.html">CONDIZIONATORI</a>
-        <a href="tetto.html">TETTO</a>
+        <div class="dropdown">
+          <a href="caldaia.html">CALDAIA ▾</a>
+          <div class="dropdown-content">
+            <a href="caldaia-manutenzione.html">Manutenzione caldaie</a>
+            <a href="caldaia-riparazioni.html">Riparazioni caldaie</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="condizionatori.html">CONDIZIONATORI ▾</a>
+          <div class="dropdown-content">
+            <a href="condizionatori-installazione.html">Installazione</a>
+            <a href="condizionatori-pulizia-filtri.html">Pulizia filtri</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="tetto.html">TETTO ▾</a>
+          <div class="dropdown-content">
+            <a href="tetto-riparazioni.html">Riparazioni tetto</a>
+            <a href="tetto-grondaie.html">Grondaie e pluviali</a>
+          </div>
+        </div>
       </nav>
   <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
     </div>
@@ -62,36 +83,56 @@
         <a href="index.html">Home</a>
         <details>
           <summary>IDRAULICO</summary>
-          <a href="idraulico.html#riparazioni">Riparazioni</a>
-          <a href="idraulico.html#installazioni">Installazioni</a>
-          <a href="idraulico.html#sblocco">Sblocco scarichi</a>
+          <a href="idraulico-riparazioni.html">Riparazioni idrauliche</a>
+          <a href="idraulico-installazioni.html">Installazioni idrauliche</a>
+          <a href="idraulico-sblocco-scarichi.html">Sblocco scarichi</a>
         </details>
         <details>
           <summary>FABBRO</summary>
-          <a href="fabbro.html#aperture">Apertura porte</a>
-          <a href="fabbro.html#serrature">Serrature</a>
+          <a href="fabbro-apertura-porte.html">Apertura porte</a>
+          <a href="fabbro-serrature.html">Serrature e cilindri</a>
         </details>
         <details>
           <summary>SPURGO</summary>
-          <a href="spurgo.html#pozzi">Pozzi neri</a>
-          <a href="spurgo.html#disostruzione">Disostruzione</a>
+          <a href="spurgo-pozzi-neri.html">Pozzi neri</a>
+          <a href="spurgo-disostruzione.html">Disostruzione</a>
         </details>
-        <a href="caldaia.html">CALDAIA</a>
-        <a href="condizionatori.html">CONDIZIONATORI</a>
-        <a href="tetto.html">TETTO</a>
+        <details>
+          <summary>CALDAIA</summary>
+          <a href="caldaia-manutenzione.html">Manutenzione caldaie</a>
+          <a href="caldaia-riparazioni.html">Riparazioni caldaie</a>
+        </details>
+        <details>
+          <summary>CONDIZIONATORI</summary>
+          <a href="condizionatori-installazione.html">Installazione</a>
+          <a href="condizionatori-pulizia-filtri.html">Pulizia filtri</a>
+        </details>
+        <details>
+          <summary>TETTO</summary>
+          <a href="tetto-riparazioni.html">Riparazioni tetto</a>
+          <a href="tetto-grondaie.html">Grondaie e pluviali</a>
+        </details>
       </nav>
     </div>
   </header>
 
-  <section class="hero" style="background-image:url('images/hero-home.jpg'), url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80');">
-    <div class="container hero-inner">
-      <h1>Milano pronto intervento</h1>
-      <p>Sempre reperibili, 7 giorni su 7 — rispondiamo 24 ore su 24.</p>
-      <div class="cta">
-        <a class="btn" href="tel:+390282398850">📞 Chiama 0282398850</a>
-        <a class="btn btn-outline" href="#servizi">Scopri servizi</a>
+  <section class="hero home-hero">
+    <div class="hero-bg" style="background-image:url('images/hero-home.jpg'), url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80'); background-size:cover;background-position:center;position:relative;">
+      <div class="container hero-inner">
+        <h1>Tecnici sempre disponibili</h1>
+        <p>Idraulico, Fabbro, Spurgo, Caldaie, Condizionatori e Tetti a Milano e provincia. Intervento rapido h24.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+390282398850">📞 Chiama 0282398850</a>
+          <a class="btn btn-outline" href="#servizi">Scopri servizi</a>
+        </div>
       </div>
     </div>
+    <aside class="cta-panel">
+      <h2>Pronto Intervento 24/7</h2>
+      <p>Tempo medio di arrivo 30 minuti in città, preventivo chiaro prima di iniziare, tecnici qualificati.</p>
+      <a class="btn" href="tel:+390282398850">Chiama ora</a>
+      <a class="btn btn-outline" href="#map">Vedi copertura</a>
+    </aside>
   </section>
 
   <section id="servizi" class="container">
@@ -104,21 +145,40 @@
   <a class="card" href="condizionatori.html"><img src="images/service-condizionatori.jpg" alt="Installazione condizionatore" loading="lazy" decoding="async" width="1200" height="800" data-fallback="https://images.unsplash.com/photo-1625046021970-c7cb1e94cfc4?auto=format&fit=crop&w=1200&q=70"><h3>Condizionatori</h3><p>Installazione e pulizia filtri.</p></a>
   <a class="card" href="tetto.html"><img src="images/service-tetto.jpg" alt="Riparazione tetto e grondaie" loading="lazy" decoding="async" width="1200" height="800" data-fallback="https://images.unsplash.com/photo-1604693220546-e6e28f3e5b7e?auto=format&fit=crop&w=1200&q=70"><h3>Tetto</h3><p>Riparazioni tetti e grondaie.</p></a>
     </div>
+
   </section>
 
   <section class="coverage">
-    <div class="container">
-      <h2 class="section-title">Dove Operiamo</h2>
-      <p>Operiamo in tutta Milano e provincia. Interventi in 30 minuti.</p>
-      <div class="zones">
-        <div>• Centro Storico</div><div>• Niguarda</div><div>• Bicocca</div><div>• Navigli</div>
-        <div>• Porta Romana</div><div>• Città Studi</div><div>• San Siro</div><div>• Fiera</div>
+    <div class="container coverage-grid">
+      <div>
+        <h2 class="section-title" style="text-align:left">Dove Operiamo</h2>
+        <p>Milano e provincia: interventi rapidi nei principali quartieri e comuni limitrofi.</p>
       </div>
+      <ul class="zones-list">
+        <li>Centro Storico</li><li>Niguarda</li><li>Bicocca</li><li>Navigli</li>
+        <li>Porta Romana</li><li>Città Studi</li><li>San Siro</li><li>Fiera</li>
+        <li>Sesto S. Giovanni</li><li>Rho</li><li>Rozzano</li><li>Monza</li>
+      </ul>
+      <div id="map" aria-label="Mappa aree coperte a Milano" role="region"></div>
     </div>
   </section>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+  "name": "ProntoRiparo 24h",
+    "image": "images/hero-home.jpg",
+    "telephone": "+39 0282398850",
+    "areaServed": "Milano e provincia",
+    "address": {"@type":"PostalAddress","addressLocality":"Milano","addressCountry":"IT"},
+    "url": "",
+    "makesOffer": [{"@type":"Offer","itemOffered":{"@type":"Service","name":"Idraulico urgente Milano"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Fabbro apertura porte Milano"}}]
+  }
+  </script>
+
   <footer>
-    <p>© 2025 FixNow 24h — Tutti i diritti riservati.</p>
+  <p>© 2025 ProntoRiparo 24h — Tutti i diritti riservati.</p>
   </footer>
 </body>
 </html>

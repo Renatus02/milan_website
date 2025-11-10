@@ -1,5 +1,5 @@
-Image asset guidelines for FixNow 24h
-====================================
+Image asset guidelines for ProntoRiparo 24h
+==========================================
 Place the following optimized JPG images in this folder to replace remote Unsplash usage and improve performance & GDPR compliance.
 
 Hero backgrounds (suggested size: 1600x900, ~180KB each, JPG progressive):
@@ -38,7 +38,7 @@ SEO & preload notes:
 - Meta description tags added for better search snippet quality.
 
 Automated download (no photos yet?):
-- A manifest exists at images/images.json with stable, seeded Picsum URLs (royalty-free placeholders) matching the filenames above.
+- A manifest exists at images/images.json with stable, seeded Picsum URLs (brand seeds switched to prontoriparo-*).
 - Run the downloader to fetch everything automatically:
   node fetch_images.js
 - Licensing: Picsum serves images under CC0/Unsplash-like free-to-use terms for placeholders. For production brand photography, replace with your own licensed images.
