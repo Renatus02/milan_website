@@ -1,0 +1,17 @@
+[
+  {"filename":"hero-home.jpg","url":"https://picsum.photos/seed/fixnow-home/1600/900.jpg"},
+
+  {"filename":"hero-idraulico.jpg","url":"https://picsum.photos/seed/fixnow-idraulico/1600/900.jpg"},
+  {"filename":"hero-fabbro.jpg","url":"https://picsum.photos/seed/fixnow-fabbro/1600/900.jpg"},
+  {"filename":"hero-spurgo.jpg","url":"https://picsum.photos/seed/fixnow-spurgo/1600/900.jpg"},
+  {"filename":"hero-caldaia.jpg","url":"https://picsum.photos/seed/fixnow-caldaia/1600/900.jpg"},
+  {"filename":"hero-condizionatori.jpg","url":"https://picsum.photos/seed/fixnow-condizionatori/1600/900.jpg"},
+  {"filename":"hero-tetto.jpg","url":"https://picsum.photos/seed/fixnow-tetto/1600/900.jpg"},
+
+  {"filename":"service-idraulico.jpg","url":"https://picsum.photos/seed/fixnow-service-idraulico/1200/800.jpg"},
+  {"filename":"service-fabbro.jpg","url":"https://picsum.photos/seed/fixnow-service-fabbro/1200/800.jpg"},
+  {"filename":"service-spurgo.jpg","url":"https://picsum.photos/seed/fixnow-service-spurgo/1200/800.jpg"},
+  {"filename":"service-caldaia.jpg","url":"https://picsum.photos/seed/fixnow-service-caldaia/1200/800.jpg"},
+  {"filename":"service-condizionatori.jpg","url":"https://picsum.photos/seed/fixnow-service-condizionatori/1200/800.jpg"},
+  {"filename":"service-tetto.jpg","url":"https://picsum.photos/seed/fixnow-service-tetto/1200/800.jpg"}
+]
