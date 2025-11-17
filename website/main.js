@@ -47,3 +47,58 @@ document.querySelectorAll('img[data-fallback]').forEach(img=>{
 		// service area circle around Milano
 		L.circle([45.4642,9.19],{radius:15000,color:'#ef4444',fillColor:'#ef4444',fillOpacity:0.08}).addTo(map);
 	});
+
+// Reveal on scroll animation
+window.addEventListener('DOMContentLoaded',()=>{
+	// Auto-tag common elements if not already marked
+	const autoSelectors = [
+		'.section-title',
+		'.cards .card',
+		'.hero .cta-panel',
+		'.coverage-grid > *'
+	];
+	autoSelectors.forEach(sel=>{
+		document.querySelectorAll(sel).forEach(el=>{
+			if(!el.hasAttribute('data-reveal')){
+				el.setAttribute('data-reveal','');
+				el.classList.add('reveal-up');
+			}
+		});
+	});
+
+	const items = Array.from(document.querySelectorAll('[data-reveal], .reveal-up'));
+	if(!('IntersectionObserver' in window) || items.length===0){
+		items.forEach(el=>el.classList.add('in-view'));
+		return;
+	}
+
+	// Basic stagger: increase delay for successive items in a visual group
+	let globalIndex = 0;
+	const setDelay = (el, idx)=>{
+		const base = el.closest('.cards') ? 80 : 100; // ms
+		const step = el.closest('.cards') ? idx : globalIndex++;
+		el.style.setProperty('--reveal-delay', `${Math.min(step*base, 600)}ms`);
+	};
+
+	// Pre-assign delays
+	const groupByParent = (parentSel)=>{
+		document.querySelectorAll(parentSel).forEach(parent=>{
+			const children = parent.querySelectorAll('[data-reveal], .reveal-up');
+			Array.from(children).forEach((el, i)=>setDelay(el, i));
+		});
+	};
+	groupByParent('.cards');
+	// Give titles an initial delay of 0
+	document.querySelectorAll('.section-title').forEach(el=>el.style.setProperty('--reveal-delay','0ms'));
+
+	const io = new IntersectionObserver((entries)=>{
+		entries.forEach(entry=>{
+			if(entry.isIntersecting){
+				entry.target.classList.add('in-view');
+				io.unobserve(entry.target);
+			}
+		});
+	},{threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+
+	items.forEach(el=>io.observe(el));
+});
