@@ -137,8 +137,54 @@ section .container h3[id]{position:relative;padding-left:28px}
 section .container h3[id]::before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;background-repeat:no-repeat;background-size:20px 20px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ef4444'><path d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5a1 1 0 0 1 1 1v3.586l2.707 2.707a1 1 0 1 1-1.414 1.414l-3-3A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1z'/></svg>")}
 section .container p{line-height:1.7;color:#374151}
 
+/* Modern service details section with grid layout */
+.service-details{padding:48px 0}
+.service-details .intro-text{font-size:15px;line-height:1.8;color:#475569;margin:0 0 36px;max-width:900px}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.service-item{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px 24px;transition:all .3s ease;position:relative}
+.service-item:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.1);border-color:#ef4444}
+.service-icon{width:64px;height:64px;background:linear-gradient(135deg,#ef4444 0%,#b91c1c 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:16px;box-shadow:0 4px 12px rgba(239,68,68,.3)}
+.service-item h3{font-size:18px;font-weight:700;color:#0f172a;margin:0 0 12px;line-height:1.4}
+.service-item p{font-size:14px;line-height:1.7;color:#64748b;margin:0}
+
 /* Contact */
 .contact .info{display:grid;gap:8px}
+.contact-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.contact-left h1 { font-size: 40px; line-height: 1.2; margin: 8px 0 16px; }
+.section-eyebrow { color: #3b82f6; font-weight: 600; letter-spacing: .08em; font-size: 14px; }
+.contact-form .row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 16px; }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 14px 16px;
+  background: #f3f4f6;
+  font-size: 16px;
+}
+.contact-form textarea { resize: vertical; }
+.btn.primary { background: linear-gradient(135deg, var(--red, #ef4444), var(--red-dark, #b91c1c)); color: #fff; border: none; padding: 12px 20px; border-radius: 10px; font-weight: 600; letter-spacing: .04em; }
+.contact-map { width: 100%; height: 520px; border: 0; border-radius: 14px; }
+
+/* Advantages section */
+.advantages { background: #f3f4f6; padding: 60px 0; }
+.advantages .section-eyebrow { color: #3b82f6; }
+.advantages h2 { font-size: 34px; margin: 8px 0 24px; }
+.advantages .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.adv-card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.adv-icon { width: 56px; height: 56px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; background: linear-gradient(135deg, var(--red, #ef4444), var(--red-dark, #b91c1c)); box-shadow: 0 6px 14px rgba(239,68,68,.25); margin-bottom: 12px; font-size: 28px; }
+.adv-card h3 { margin: 8px 0; font-size: 18px; }
+.adv-card p { color: #4b5563; }
+
+@media (max-width: 900px) {
+  .contact-two-column { grid-template-columns: 1fr; }
+  .contact-form .row { grid-template-columns: 1fr; }
+  .advantages .grid { grid-template-columns: 1fr; }
+}
 .contact a{color:var(--red)}
 
 /* Back link */
