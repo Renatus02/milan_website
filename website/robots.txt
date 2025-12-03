@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.prontoriparo24h.it/sitemap.xml
+Sitemap: https://www.prontoh24.com/sitemap.xml
