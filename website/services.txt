@@ -1,0 +1,32 @@
+"Idraulico"
+   -> Riparazione di perdite d'acqua e rubinetterie
+   -> Disostruzione di impianti idraulici, tubature, lavandini e WC
+   -> Sostituzione di sifoni e scaldabagni
+
+"Elettricista"
+   -> Riparazione Guasti Elettrici
+   -> SOS elettricista urgente H24
+   -> Certificazione Impianti Elettrici
+   -> Impianti Allarme e Antifurto
+   -> Riparazione Serrande Elettriche
+
+"Fabbro"
+   -> Apertura Porte Blindate
+   -> Riparazione Serrande
+   -> Cambio Serrature
+   -> Persiane e Tapparelle
+   -> Montaggio Porte Blindate
+   -> Sblocco Serrature H24 su 24
+   -> Apertura Porte Bloccate
+
+"Spurgo"
+   -> Pozzi neri
+   -> Disostruzione
+
+"Caldaia"
+   -> Manutenzione caldaie
+   -> Riparazioni caldaie
+
+"Condizionatori"
+   -> Installazione
+   -> Pulizia filtri
